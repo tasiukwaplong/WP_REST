@@ -39,4 +39,4 @@ On error like calling a post that does not exist, e.g call to ```http://YOUR_URL
     }
 }
 ```
-Replace ```http://YOUR_URL/``` with [http://nacoss-fulafia.000webhostapp.com/api](http://nacossful.000webhostapp.com/api) to test the API
+Replace ```http://YOUR_URL/``` with [http://nacoss-ful.000webhostapp.com/api](http://nacoss-ful.000webhostapp.com/api) to test the API
