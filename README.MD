@@ -7,6 +7,7 @@ To make a call to the API use:
 
 * ``http://YOUR_URL/?call=getAllPosts`` --To get all posts from WP project
 * ``http://YOUR_URL/?call=getPost/id=12`` --To get a particular post content from the WP project with ID of 12
+* ``http://YOUR_URL/?call=getpage&page=gallery`` --To get a particular page. You can get a page via its page name or page ID
 
 ## RESPONSE
 On successful call to get all posts e.g: ```http://YOUR_URL/?call=getAllPosts``` the response that will be returned will be: 
