@@ -1,12 +1,10 @@
 <?php
-//$WP_REST = new Tasiukwaplong\WP_REST\WP_REST(DB_NAME, TABLE_PREFIX, DB_USERNAME, DB_PASSWORD, DB_HOST);
-
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: PUT, GET, POST");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
 require 'WP_REST.php';
-$WP_REST = new Tasiukwaplong\WP_REST\WP_REST("nacoss-ful", 'nf', 'root', '', 'localhost');
+$WP_REST = new Tasiukwaplong\WP_REST\WP_REST(DBNAME, DBPREFIX, DBUSER, DBPSW, 'localhost');
 
 $CALL_METHOD =  "asJSON";//asArray
 $id = (isset($_GET['id'])) ? htmlspecialchars($_GET['id']) : '' ;
@@ -24,7 +22,11 @@ switch ($call) {
 	case 'getpage':
 		die($WP_REST->getPage($page, $CALL_METHOD));
 		break;	
+	case 'getallfiles':
+		die($WP_REST->getAllFiles($CALL_METHOD));
+		break;	
 	default:
 		die(json_encode(["data"=> ["errorExist"=>true, "body"=>"Incorrect API call"]], true));
 		break;
 }
+
